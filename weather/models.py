@@ -1,4 +1,5 @@
-# weather/models.py
+from django.db import models
+
 class WeatherEntity:
 
     def __init__(self, temperature, date,

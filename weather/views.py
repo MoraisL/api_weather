@@ -15,6 +15,10 @@ class WeatherView(View):
 class WeatherGenerate(View):
     def get(self, request):
         repository = WeatherRepository(collectionName='weathers')
+        # wheater = WeatherEntity(
+        #     temperature=randrange(start=17, stop=40),
+        #     date=datetime.now()
+        # )
         wheater = {
             "temperature" : 28,
             "date": "hoje"

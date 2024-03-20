@@ -1,6 +1,9 @@
-from django.contrib import admin
+
 from django.urls import path
+from weather.views import WeatherView
+from weather.views import WeatherGenerate
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', WeatherView.as_view(), name="Weather View"),
+    path ('generate', WeatherGenerate.as_view(), name="Weather Generate"),
 ]
